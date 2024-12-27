@@ -82,7 +82,7 @@ export const ScreenshotSelector = memo(
           videoRef.current.srcObject = stream;
           await videoRef.current.play();
         } catch (error) {
-          console.error('Failed to initialize stream:', error);
+         
           setIsSelectionMode(false);
           toast.error('Failed to initialize screen capture');
         }
@@ -201,7 +201,7 @@ export const ScreenshotSelector = memo(
         };
         reader.readAsDataURL(blob);
       } catch (error) {
-        console.error('Failed to capture screenshot:', error);
+        
         toast.error('Failed to capture screenshot');
 
         if (mediaStreamRef.current) {

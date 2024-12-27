@@ -79,15 +79,15 @@ export const ImportFolderButton: React.FC<ImportFolderButtonProps> = ({ classNam
         await importChat(folderName, [...messages]);
       }
 
-      logStore.logSystem('Folder imported successfully', {
+      logStore.logSystem('Folder imported', {
         folderName,
         textFileCount: textFiles.length,
         binaryFileCount: binaryFilePaths.length,
       });
-      toast.success('Folder imported successfully');
+      toast.success('Folder imported');
     } catch (error) {
       logStore.logError('Failed to import folder', error, { folderName });
-      console.error('Failed to import folder:', error);
+      
       toast.error('Failed to import folder');
     } finally {
       setIsLoading(false);

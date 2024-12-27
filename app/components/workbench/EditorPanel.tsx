@@ -76,7 +76,7 @@ export const EditorPanel = memo(
               <div className="flex flex-col border-r border-bolt-elements-borderColor h-full">
                 <PanelHeader>
                   <div className="i-ph:tree-structure-duotone shrink-0" />
-                  Files
+                  Project Files
                 </PanelHeader>
                 <FileTree
                   className="h-full"

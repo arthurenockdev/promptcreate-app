@@ -39,7 +39,7 @@ export default function ChatAlert({ alert, clearAlert, postMessage }: Props) {
               className={`text-sm font-medium text-bolt-elements-textPrimary`}
             >
               {/* {title} */}
-              Opps There is an error
+              There is an error
             </motion.h3>
             <motion.div
               initial={{ opacity: 0 }}
@@ -48,7 +48,7 @@ export default function ChatAlert({ alert, clearAlert, postMessage }: Props) {
               className={`mt-2 text-sm text-bolt-elements-textSecondary`}
             >
               <p>
-                We encountered an error while running terminal commands. Would you like Bolt to analyze and help resolve
+                We encountered an error while running terminal commands. Would you like PromptCreate to analyze and help resolve
                 this issue?
               </p>
               {description && (
@@ -78,7 +78,7 @@ export default function ChatAlert({ alert, clearAlert, postMessage }: Props) {
                   )}
                 >
                   <div className="i-ph:chat-circle-duotone"></div>
-                  Ask Bolt
+                  Ask
                 </button>
                 <button
                   onClick={clearAlert}

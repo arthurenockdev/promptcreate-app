@@ -68,7 +68,7 @@ export default function DataTab() {
     } catch (error) {
       logStore.logError('Failed to export chats', error);
       toast.error('Failed to export chats');
-      console.error(error);
+      
     }
   };
 
@@ -96,7 +96,7 @@ export default function DataTab() {
     } catch (error) {
       logStore.logError('Failed to delete chats', error);
       toast.error('Failed to delete chats');
-      console.error(error);
+      
     } finally {
       setIsDeleting(false);
     }
@@ -143,7 +143,7 @@ export default function DataTab() {
         toast.success('Settings imported successfully. Please refresh the page for changes to take effect.');
       } catch (error) {
         toast.error('Failed to import settings. Make sure the file is a valid JSON file.');
-        console.error('Failed to import settings:', error);
+        
       }
     };
     reader.readAsText(file);
@@ -211,7 +211,7 @@ export default function DataTab() {
 
       } catch (error) {
         toast.error('Failed to import API keys. Make sure the file is a valid JSON file.');
-        console.error('Failed to import API keys:', error);
+        
       }
     };
     reader.readAsText(file);

@@ -303,7 +303,7 @@ export const Preview = memo(() => {
               />
             </>
           ) : (
-            <div className="flex w-full h-full justify-center items-center bg-white">No preview available</div>
+            <div className="flex w-full h-full justify-center items-center bg-white">Preview Unvailable</div>
           )}
 
           {isDeviceModeOn && (

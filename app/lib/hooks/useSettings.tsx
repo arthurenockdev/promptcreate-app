@@ -42,7 +42,7 @@ export function useSettings() {
 
       return versionData.commit.slice(0, 7) === data.object.sha.slice(0, 7);
     } catch (error) {
-      console.warn('Error checking stable version:', error);
+      
       return false;
     }
   };

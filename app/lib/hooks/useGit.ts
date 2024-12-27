@@ -18,7 +18,7 @@ const lookupSavedPassword = (url: string) => {
     const { username, password } = JSON.parse(gitCreds || '{}');
     return { username, password };
   } catch (error) {
-    console.log(`Failed to parse Git Cookie ${error}`);
+    
     return null;
   }
 };
@@ -106,14 +106,14 @@ const getFs = (
     readFile: async (path: string, options: any) => {
       const encoding = options.encoding;
       const relativePath = pathUtils.relative(webcontainer.workdir, path);
-      console.log('readFile', relativePath, encoding);
+      
 
       return await webcontainer.fs.readFile(relativePath, encoding);
     },
     writeFile: async (path: string, data: any, options: any) => {
       const encoding = options.encoding;
       const relativePath = pathUtils.relative(webcontainer.workdir, path);
-      console.log('writeFile', { relativePath, data, encoding });
+     
 
       if (record.current) {
         record.current[relativePath] = { data, encoding };
@@ -123,25 +123,25 @@ const getFs = (
     },
     mkdir: async (path: string, options: any) => {
       const relativePath = pathUtils.relative(webcontainer.workdir, path);
-      console.log('mkdir', relativePath, options);
+      
 
       return await webcontainer.fs.mkdir(relativePath, { ...options, recursive: true });
     },
     readdir: async (path: string, options: any) => {
       const relativePath = pathUtils.relative(webcontainer.workdir, path);
-      console.log('readdir', relativePath, options);
+      
 
       return await webcontainer.fs.readdir(relativePath, options);
     },
     rm: async (path: string, options: any) => {
       const relativePath = pathUtils.relative(webcontainer.workdir, path);
-      console.log('rm', relativePath, options);
+      
 
       return await webcontainer.fs.rm(relativePath, { ...(options || {}) });
     },
     rmdir: async (path: string, options: any) => {
       const relativePath = pathUtils.relative(webcontainer.workdir, path);
-      console.log('rmdir', relativePath, options);
+      
 
       return await webcontainer.fs.rm(relativePath, { recursive: true, ...options });
     },

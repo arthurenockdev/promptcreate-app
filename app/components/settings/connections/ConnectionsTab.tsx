@@ -45,7 +45,7 @@ export default function ConnectionsTab() {
 
       return false;
     } catch (error) {
-      console.error('Error verifying GitHub credentials:', error);
+      
       setIsConnected(false);
 
       return false;

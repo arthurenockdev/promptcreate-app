@@ -40,22 +40,22 @@ export class LLMManager {
           try {
             this.registerProvider(provider);
           } catch (error: any) {
-            console.log('Failed To Register Provider: ', provider.name, 'error:', error.message);
+            
           }
         }
       }
     } catch (error) {
-      console.error('Error registering providers:', error);
+      
     }
   }
 
   registerProvider(provider: BaseProvider) {
     if (this._providers.has(provider.name)) {
-      console.warn(`Provider ${provider.name} is already registered. Skipping.`);
+      
       return;
     }
 
-    console.log('Registering Provider: ', provider.name);
+  
     this._providers.set(provider.name, provider);
     this._modelList = [...this._modelList, ...provider.staticModels];
   }

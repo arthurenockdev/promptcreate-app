@@ -111,7 +111,7 @@ export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => 
     try {
       const directoryHandle = await window.showDirectoryPicker();
       await workbenchStore.syncFiles(directoryHandle);
-      toast.success('Files synced successfully');
+      toast.success('Files synced');
     } catch (error) {
       console.error('Error syncing files:', error);
       toast.error('Failed to sync files');

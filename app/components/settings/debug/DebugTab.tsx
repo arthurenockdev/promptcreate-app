@@ -71,7 +71,7 @@ const GITHUB_URLS = {
         version: packageJson.version,
       };
     } catch (error) {
-      console.log('Failed to fetch local commit info:', error);
+      
       throw new Error('Failed to fetch local commit info');
     }
   },
